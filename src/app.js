@@ -25,7 +25,7 @@ app.use(morgan(process.env.NODE_ENV === "production" ? "combined" : "dev"));
 const corsOptions = {
   origin:
     process.env.NODE_ENV === "production"
-      ? process.env.ALLOWED_ORIGINS?.split(",") || ["http://localhost:3001"]
+      ? process.env.ALLOWED_ORIGINS?.split(",") || ["https://dynamic-form-fe.onrender.com"]
       : true, // Allow all origins in development
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
